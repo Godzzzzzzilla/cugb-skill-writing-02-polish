@@ -1,0 +1,48 @@
+{
+ "deviations_from_paper": [
+  {
+   "target": "evidence anchors re-slice exactly",
+   "metric": "custom",
+   "reference_value": 1.0,
+   "actual_value": 1.0,
+   "score": 1.0,
+   "tolerance": 0.0,
+   "verifier_script": "scripts/verify.py",
+   "evidence_artifact": "result",
+   "explanation": "Every evidence item is a character range into an emitted text file; verify.py re-slices it and recomputes the share that still matches."
+  }
+ ],
+ "envelope": [
+  {
+   "condition": "a draft alone (minimal-edit mode)",
+   "status": "in envelope",
+   "note": "closed-list phrase edits plus spacing; every claim-bearing token audited"
+  },
+  {
+   "condition": "a draft plus a polished candidate (llm mode)",
+   "status": "in envelope",
+   "note": "the candidate is audited, never rewritten"
+  },
+  {
+   "condition": "table- or code-heavy text",
+   "status": "partial",
+   "note": "headings, tables and fenced blocks are passed through verbatim"
+  }
+ ],
+ "failure_modes": [
+  {
+   "mode": "candidate drops a number, unit or citation",
+   "impact": "audit fails that class and lists the missing tokens"
+  },
+  {
+   "mode": "candidate removes a hedge",
+   "impact": "reported as a preservation violation rather than silently accepted"
+  },
+  {
+   "mode": "candidate merges two sentences",
+   "impact": "reported under alignment.dropped_text; not treated as a failure"
+  }
+ ],
+ "sensitivity": [],
+ "note": "This is a skill-authoring challenge: the targets are the demonstration benchmark and the audit, not a paper's reported numbers."
+}

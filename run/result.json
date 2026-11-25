@@ -1,0 +1,677 @@
+{
+ "schema": "arm-skill-result/1.1",
+ "skill": {
+  "name": "writing-02-polish",
+  "version": "1.0.0",
+  "armkit": "1.1.0"
+ },
+ "case_id": "demo-polish-01",
+ "status": "success",
+ "status_reason": "sentence pairs align and every number, unit, citation, negation and hedge survived",
+ "result": {
+  "mode": "llm",
+  "polished": "# Results\n\nTo evaluate the pretreatment effect, we ran a series of experiments. The samples were\nstored at 4 °C for 12 h before measurement, not at room temperature. Because the\ninstrument drifted during the run, the values in Table 2 may be slightly lower than the\ntrue values. The treatment group showed a 23.4% increase in yield (p = 0.03) over the\ncontrol, consistent with earlier work [2,5]. This effect is likely caused by the larger\nsurface area. The sample size was small (n = 6), so the result may not generalize to\nother catalysts.\n",
+  "changes": [],
+  "alignment": {
+   "pairs": [
+    {
+     "pair": 1,
+     "original_index": 1,
+     "candidate_index": 1,
+     "original": "In order to evaluate the effect of the pretreatment, we performed a series of experiments.",
+     "candidate": "To evaluate the pretreatment effect, we ran a series of experiments.",
+     "preservation": {
+      "numbers": {
+       "ok": true,
+       "missing": []
+      },
+      "units": {
+       "ok": true,
+       "missing": []
+      },
+      "citations": {
+       "ok": true,
+       "missing": []
+      },
+      "negations": {
+       "ok": true,
+       "missing": []
+      },
+      "hedges": {
+       "ok": true,
+       "missing": []
+      }
+     }
+    },
+    {
+     "pair": 2,
+     "original_index": 2,
+     "candidate_index": 2,
+     "original": "It is important to note that the samples were not stored at room temperature;",
+     "candidate": "The samples were stored at 4 °C for 12 h before measurement, not at room temperature.",
+     "preservation": {
+      "numbers": {
+       "ok": true,
+       "missing": []
+      },
+      "units": {
+       "ok": true,
+       "missing": []
+      },
+      "citations": {
+       "ok": true,
+       "missing": []
+      },
+      "negations": {
+       "ok": true,
+       "missing": []
+      },
+      "hedges": {
+       "ok": true,
+       "missing": []
+      }
+     }
+    },
+    {
+     "pair": 3,
+     "original_index": 3,
+     "candidate_index": 3,
+     "original": "they were kept at 4 °C for 12 h before the measurement.",
+     "candidate": "Because the instrument drifted during the run, the values in Table 2 may be slightly lower than the true values.",
+     "preservation": {
+      "numbers": {
+       "ok": false,
+       "missing": [
+        "12",
+        "4"
+       ]
+      },
+      "units": {
+       "ok": false,
+       "missing": [
+        "h"
+       ]
+      },
+      "citations": {
+       "ok": true,
+       "missing": []
+      },
+      "negations": {
+       "ok": true,
+       "missing": []
+      },
+      "hedges": {
+       "ok": true,
+       "missing": []
+      }
+     }
+    },
+    {
+     "pair": 4,
+     "original_index": 4,
+     "candidate_index": 4,
+     "original": "Due to the fact that the instrument drifted during the run, the values reported in Table 2 may be slightly lower than the true values.",
+     "candidate": "The treatment group showed a 23.4% increase in yield (p = 0.03) over the control, consistent with earlier work [2,5].",
+     "preservation": {
+      "numbers": {
+       "ok": false,
+       "missing": [
+        "2"
+       ]
+      },
+      "units": {
+       "ok": true,
+       "missing": []
+      },
+      "citations": {
+       "ok": true,
+       "missing": []
+      },
+      "negations": {
+       "ok": true,
+       "missing": []
+      },
+      "hedges": {
+       "ok": false,
+       "missing": [
+        "may"
+       ]
+      }
+     }
+    },
+    {
+     "pair": 5,
+     "original_index": 5,
+     "candidate_index": 5,
+     "original": "The treatment group showed a 23.4% increase in yield (p = 0.03) compared with the control, which is consistent with previous work [2,5].",
+     "candidate": "This effect is likely caused by the larger surface area.",
+     "preservation": {
+      "numbers": {
+       "ok": false,
+       "missing": [
+        "0.03",
+        "2,5",
+        "23.4%"
+       ]
+      },
+      "units": {
+       "ok": true,
+       "missing": []
+      },
+      "citations": {
+       "ok": false,
+       "missing": [
+        "[2,5]"
+       ]
+      },
+      "negations": {
+       "ok": true,
+       "missing": []
+      },
+      "hedges": {
+       "ok": true,
+       "missing": []
+      }
+     }
+    },
+    {
+     "pair": 6,
+     "original_index": 6,
+     "candidate_index": 6,
+     "original": "We believe that this effect is likely caused by the increased surface area.",
+     "candidate": "The sample size was small (n = 6), so the result may not generalize to other catalysts.",
+     "preservation": {
+      "numbers": {
+       "ok": true,
+       "missing": []
+      },
+      "units": {
+       "ok": true,
+       "missing": []
+      },
+      "citations": {
+       "ok": true,
+       "missing": []
+      },
+      "negations": {
+       "ok": true,
+       "missing": []
+      },
+      "hedges": {
+       "ok": false,
+       "missing": [
+        "likely"
+       ]
+      }
+     }
+    },
+    {
+     "pair": 7,
+     "original_index": 7,
+     "candidate_index": null,
+     "original": "It should be noted that the sample size was small (n = 6), and therefore the result may not generalize to other catalysts.",
+     "candidate": null,
+     "preservation": {
+      "dropped": {
+       "ok": false,
+       "missing": []
+      }
+     }
+    }
+   ],
+   "sentences_in": 7,
+   "sentences_out": 6,
+   "paired": 6,
+   "dropped": 1,
+   "added": 0,
+   "dropped_text": [
+    "It should be noted that the sample size was small (n = 6), and therefore the result may not generalize to other catalysts."
+   ]
+  },
+  "preservation": {
+   "ok": true,
+   "missing": {
+    "numbers": [],
+    "units": [],
+    "citations": [],
+    "negations": [],
+    "hedges": []
+   }
+  },
+  "edit_count": 0
+ },
+ "evidence": [
+  {
+   "id": "s1",
+   "claim": "sentence 1: In order to evaluate the effect of the pretreatment, we performed a s…",
+   "anchor": {
+    "source": "inputs/draft.md",
+    "char_start": 11,
+    "char_end": 91,
+    "quote": "In order to evaluate the effect of the pretreatment, we performed a series of ex"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "s2",
+   "claim": "sentence 2: It is important to note that the samples were not stored at room temp…",
+   "anchor": {
+    "source": "inputs/draft.md",
+    "char_start": 102,
+    "char_end": 179,
+    "quote": "It is important to note that the samples were not stored at room temperature;"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "s4",
+   "claim": "sentence 4: Due to the fact that the instrument drifted\nduring the run, the value…",
+   "anchor": {
+    "source": "inputs/draft.md",
+    "char_start": 236,
+    "char_end": 316,
+    "quote": "Due to the fact that the instrument drifted\nduring the run, the values reported "
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "s5",
+   "claim": "sentence 5: The treatment group showed a 23.4% increase in yield (p = 0.03) compa…",
+   "anchor": {
+    "source": "inputs/draft.md",
+    "char_start": 371,
+    "char_end": 451,
+    "quote": "The treatment group showed a 23.4% increase in yield (p = 0.03) compared with th"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "s6",
+   "claim": "sentence 6: We believe that this effect is likely caused\nby the increased surface…",
+   "anchor": {
+    "source": "inputs/draft.md",
+    "char_start": 508,
+    "char_end": 583,
+    "quote": "We believe that this effect is likely caused\nby the increased surface area."
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "s7",
+   "claim": "sentence 7: It should be noted that the sample size was small (n = 6),\nand theref…",
+   "anchor": {
+    "source": "inputs/draft.md",
+    "char_start": 584,
+    "char_end": 664,
+    "quote": "It should be noted that the sample size was small (n = 6),\nand therefore the res"
+   },
+   "verified": true,
+   "note": "exact"
+  }
+ ],
+ "uncertainty": [],
+ "limits": [
+  "a candidate draft was present, so the text was audited and not rewritten"
+ ],
+ "audit": {
+  "checks": [
+   {
+    "id": "input-found",
+    "ok": true,
+    "detail": "2 text file(s)",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "numbers-preserved",
+    "ok": true,
+    "detail": "7 in, 7 out",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "units-preserved",
+    "ok": true,
+    "detail": "1 in, 1 out",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "citations-preserved",
+    "ok": true,
+    "detail": "1 in, 1 out",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "negations-preserved",
+    "ok": true,
+    "detail": "8 in, 8 out",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "hedges-preserved",
+    "ok": true,
+    "detail": "3 in, 3 out",
+    "weight": 1.0,
+    "critical": false
+   },
+   {
+    "id": "sentences-paired",
+    "ok": true,
+    "detail": "6/7 source sentences paired, 1 dropped, 0 added",
+    "weight": 0.8,
+    "critical": false
+   },
+   {
+    "id": "edited-or-audited",
+    "ok": true,
+    "detail": "mode=llm",
+    "weight": 1.0,
+    "critical": false
+   },
+   {
+    "id": "anchors-verified",
+    "ok": true,
+    "detail": "6/6 sentence ranges re-slice",
+    "weight": 1.0,
+    "critical": true
+   }
+  ],
+  "passed": 9,
+  "total": 9,
+  "ratio": 1.0,
+  "failed_critical": []
+ },
+ "artifacts": [
+  {
+   "path": "inputs/draft.md",
+   "kind": "data",
+   "exists": true,
+   "bytes": 708,
+   "sha256": "9f1e626af28256b4951d84dabd625813a81678838123ea8ba4379ae49ee8497f",
+   "note": "source draft, copied verbatim"
+  },
+  {
+   "path": "polished.md",
+   "kind": "data",
+   "exists": true,
+   "bytes": 543,
+   "sha256": "ee3949bdeab845478cb365a288b1e4d88e71f8c6ef131e7d02bc1182edb5b5cb",
+   "note": "the deliverable text"
+  }
+ ],
+ "contract": {
+  "declared_fields": [
+   "polished",
+   "changes",
+   "preservation",
+   "alignment",
+   "status"
+  ],
+  "fields": {
+   "polished": "# Results\n\nTo evaluate the pretreatment effect, we ran a series of experiments. The samples were\nstored at 4 °C for 12 h before measurement, not at room temperature. Because the\ninstrument drifted during the run, the values in Table 2 may be slightly lower than the\ntrue values. The treatment group showed a 23.4% increase in yield (p = 0.03) over the\ncontrol, consistent with earlier work [2,5]. This effect is likely caused by the larger\nsurface area. The sample size was small (n = 6), so the result may not generalize to\nother catalysts.\n",
+   "changes": [],
+   "preservation": {
+    "ok": true,
+    "missing": {
+     "numbers": [],
+     "units": [],
+     "citations": [],
+     "negations": [],
+     "hedges": []
+    }
+   },
+   "alignment": {
+    "pairs": [
+     {
+      "pair": 1,
+      "original_index": 1,
+      "candidate_index": 1,
+      "original": "In order to evaluate the effect of the pretreatment, we performed a series of experiments.",
+      "candidate": "To evaluate the pretreatment effect, we ran a series of experiments.",
+      "preservation": {
+       "numbers": {
+        "ok": true,
+        "missing": []
+       },
+       "units": {
+        "ok": true,
+        "missing": []
+       },
+       "citations": {
+        "ok": true,
+        "missing": []
+       },
+       "negations": {
+        "ok": true,
+        "missing": []
+       },
+       "hedges": {
+        "ok": true,
+        "missing": []
+       }
+      }
+     },
+     {
+      "pair": 2,
+      "original_index": 2,
+      "candidate_index": 2,
+      "original": "It is important to note that the samples were not stored at room temperature;",
+      "candidate": "The samples were stored at 4 °C for 12 h before measurement, not at room temperature.",
+      "preservation": {
+       "numbers": {
+        "ok": true,
+        "missing": []
+       },
+       "units": {
+        "ok": true,
+        "missing": []
+       },
+       "citations": {
+        "ok": true,
+        "missing": []
+       },
+       "negations": {
+        "ok": true,
+        "missing": []
+       },
+       "hedges": {
+        "ok": true,
+        "missing": []
+       }
+      }
+     },
+     {
+      "pair": 3,
+      "original_index": 3,
+      "candidate_index": 3,
+      "original": "they were kept at 4 °C for 12 h before the measurement.",
+      "candidate": "Because the instrument drifted during the run, the values in Table 2 may be slightly lower than the true values.",
+      "preservation": {
+       "numbers": {
+        "ok": false,
+        "missing": [
+         "12",
+         "4"
+        ]
+       },
+       "units": {
+        "ok": false,
+        "missing": [
+         "h"
+        ]
+       },
+       "citations": {
+        "ok": true,
+        "missing": []
+       },
+       "negations": {
+        "ok": true,
+        "missing": []
+       },
+       "hedges": {
+        "ok": true,
+        "missing": []
+       }
+      }
+     },
+     {
+      "pair": 4,
+      "original_index": 4,
+      "candidate_index": 4,
+      "original": "Due to the fact that the instrument drifted during the run, the values reported in Table 2 may be slightly lower than the true values.",
+      "candidate": "The treatment group showed a 23.4% increase in yield (p = 0.03) over the control, consistent with earlier work [2,5].",
+      "preservation": {
+       "numbers": {
+        "ok": false,
+        "missing": [
+         "2"
+        ]
+       },
+       "units": {
+        "ok": true,
+        "missing": []
+       },
+       "citations": {
+        "ok": true,
+        "missing": []
+       },
+       "negations": {
+        "ok": true,
+        "missing": []
+       },
+       "hedges": {
+        "ok": false,
+        "missing": [
+         "may"
+        ]
+       }
+      }
+     },
+     {
+      "pair": 5,
+      "original_index": 5,
+      "candidate_index": 5,
+      "original": "The treatment group showed a 23.4% increase in yield (p = 0.03) compared with the control, which is consistent with previous work [2,5].",
+      "candidate": "This effect is likely caused by the larger surface area.",
+      "preservation": {
+       "numbers": {
+        "ok": false,
+        "missing": [
+         "0.03",
+         "2,5",
+         "23.4%"
+        ]
+       },
+       "units": {
+        "ok": true,
+        "missing": []
+       },
+       "citations": {
+        "ok": false,
+        "missing": [
+         "[2,5]"
+        ]
+       },
+       "negations": {
+        "ok": true,
+        "missing": []
+       },
+       "hedges": {
+        "ok": true,
+        "missing": []
+       }
+      }
+     },
+     {
+      "pair": 6,
+      "original_index": 6,
+      "candidate_index": 6,
+      "original": "We believe that this effect is likely caused by the increased surface area.",
+      "candidate": "The sample size was small (n = 6), so the result may not generalize to other catalysts.",
+      "preservation": {
+       "numbers": {
+        "ok": true,
+        "missing": []
+       },
+       "units": {
+        "ok": true,
+        "missing": []
+       },
+       "citations": {
+        "ok": true,
+        "missing": []
+       },
+       "negations": {
+        "ok": true,
+        "missing": []
+       },
+       "hedges": {
+        "ok": false,
+        "missing": [
+         "likely"
+        ]
+       }
+      }
+     },
+     {
+      "pair": 7,
+      "original_index": 7,
+      "candidate_index": null,
+      "original": "It should be noted that the sample size was small (n = 6), and therefore the result may not generalize to other catalysts.",
+      "candidate": null,
+      "preservation": {
+       "dropped": {
+        "ok": false,
+        "missing": []
+       }
+      }
+     }
+    ],
+    "sentences_in": 7,
+    "sentences_out": 6,
+    "paired": 6,
+    "dropped": 1,
+    "added": 0,
+    "dropped_text": [
+     "It should be noted that the sample size was small (n = 6), and therefore the result may not generalize to other catalysts."
+    ]
+   },
+   "status": "success"
+  },
+  "unmapped": [],
+  "raw": {
+   "fields": [
+    "polished",
+    "changes",
+    "preservation",
+    "alignment",
+    "status"
+   ]
+  }
+ },
+ "run": {
+  "started_at": "2026-11-25T07:54:43Z",
+  "finished_at": "2026-11-25T07:54:43Z",
+  "argv": [
+   "scripts/run.py",
+   "--input",
+   "examples/case.json",
+   "--output",
+   "C:\\Users\\zcy\\WorkBuddy\\2026-11-25-15-07-35\\arena\\tasks\\writing-02-polish\\app_output"
+  ],
+  "python": "3.13.14",
+  "cwd": "C:\\Users\\zcy\\WorkBuddy\\2026-11-25-15-07-35\\arena\\tasks\\writing-02-polish",
+  "mode": "llm",
+  "source": "draft.md",
+  "candidate": "polished_llm.md",
+  "case_notes": []
+ }
+}

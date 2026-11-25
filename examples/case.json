@@ -1,0 +1,6 @@
+{
+ "case_id": "demo-polish-01",
+ "task": "Punctuate and tighten the draft without changing its meaning: no number, unit, citation, negation or hedge may move.",
+ "materials": ["draft.md", "polished_llm.md"],
+ "output_contract": {"fields": ["polished", "changes", "preservation", "alignment", "status"]}
+}

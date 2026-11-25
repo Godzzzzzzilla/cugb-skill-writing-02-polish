@@ -1,0 +1,71 @@
+{
+ "checks": [
+  {
+   "id": "input-found",
+   "ok": true,
+   "detail": "2 text file(s)",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "numbers-preserved",
+   "ok": true,
+   "detail": "7 in, 7 out",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "units-preserved",
+   "ok": true,
+   "detail": "1 in, 1 out",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "citations-preserved",
+   "ok": true,
+   "detail": "1 in, 1 out",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "negations-preserved",
+   "ok": true,
+   "detail": "8 in, 8 out",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "hedges-preserved",
+   "ok": true,
+   "detail": "3 in, 3 out",
+   "weight": 1.0,
+   "critical": false
+  },
+  {
+   "id": "sentences-paired",
+   "ok": true,
+   "detail": "6/7 source sentences paired, 1 dropped, 0 added",
+   "weight": 0.8,
+   "critical": false
+  },
+  {
+   "id": "edited-or-audited",
+   "ok": true,
+   "detail": "mode=llm",
+   "weight": 1.0,
+   "critical": false
+  },
+  {
+   "id": "anchors-verified",
+   "ok": true,
+   "detail": "6/6 sentence ranges re-slice",
+   "weight": 1.0,
+   "critical": true
+  }
+ ],
+ "passed": 9,
+ "total": 9,
+ "ratio": 1.0,
+ "failed_critical": []
+}
